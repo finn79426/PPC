@@ -1,1 +1,1 @@
-All Solve!
+All solve!
