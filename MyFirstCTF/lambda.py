@@ -10,10 +10,10 @@ from pwn import *
 
 context.log_level = "DEBUG"
 
-f0 = lambda x: ((x**2)*3) + x + 3
-f1 = lambda x: ((x**2)*5) + 8
-f2 = lambda x: ((x**3)*4) + (6*x) + 6
-f3 = lambda x: ((x**3)*7) + ((x**2)*5)
+f0 = lambda x: (3*(x**2)) + x + 3
+f1 = lambda x: (5*(x**2)) + 8
+f2 = lambda x: (4*(x**3)) + (6*x) + 6
+f3 = lambda x: (7*(x**3)) + (5*(x**2))
 f4 = lambda x: (x**2) + 4*x + 3
 
 
