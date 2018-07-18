@@ -10,7 +10,7 @@ from pwn import *
 import time
 
 def caeser_cipher(string, offset, plaintext):
-    for i in string:
+    for j in string:
         if ord(j) not in range(ord("A"), ord("Z")+1): # If j not in 65~90, I can confirm it's NOT an alphabet
             plaintext += j 
         else:

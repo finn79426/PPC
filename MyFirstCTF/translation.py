@@ -1,5 +1,10 @@
 #! /usr/bin/python
 # -*- coding: utf-8 -*-
+# By : howpwn
+# Email : finn79426@gmail.com
+
+#! /usr/bin/python
+# -*- coding: utf-8 -*-
 # vim:fenc=utf-8
 #
 # Copyright © 2018 howpwn <finn79426@gmail.com>
@@ -20,25 +25,26 @@ r.readline() # integer : 24930 ( which comes from 97 * 256 + 98 = 24930 )
 
 for i in range(0, 100):
 
-	r.readline()
+    r.readline()
 
-	string = r.recvuntil("\n").split(" ")[2].strip("\n")
-	string_len = len(string) - 1
-	number = 0
+    string = r.recvuntil("\n").split(" ")[2].strip("\n")
+    string_len = len(string) - 1
+    number = 0
 
-	print "====================="
-	print "String = ", string
-	print "pow = ", string_len
-	print "====================="
+    print "====================="
+    print "String = ", string
+    print "pow = ", string_len
+    print "====================="
 
-	for j in string:
-            j = s2n(j)
-            number += j * 256 ** string_len
-    	    string_len -= 1
-    
-	print "Result = ", number
+    for j in string:
+        j = s2n(j)
+        number += j * 256 ** string_len
+        string_len -= 1
 
-	r.recvuntil("integer : ")
-	r.sendline(str(number))
-    
+    print "Result = ", number
+
+    r.recvuntil("integer : ")
+    r.sendline(str(number))
+
 r.interactive()
+
